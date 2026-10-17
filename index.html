@@ -6,10 +6,15 @@
     <title>LiVA Travel Armenia | Պրեմիում ճանապարհորդություններ</title>
     <meta name="description" content="LiVA Travel Armenia - Պրեմիում ճանապարհորդական գործակալություն Հայաստանում։ Արտագնա և ներգնա տուրեր, հանգստյան փաթեթներ և անհատական ճանապարհորդություններ։">
     
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Sans Armenian & Noto Serif Armenian -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&family=Noto+Serif+Armenian:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
@@ -17,26 +22,55 @@
             theme: {
                 extend: {
                     colors: {
-                        ivory: '#FDFBF7', olive: '#4A5D23', 'olive-dark': '#3A4A1B', 'olive-light': '#6B8E23',
-                        beige: '#E8DFD0', 'beige-light': '#F2EBE0', charcoal: '#2C2C2C', 'charcoal-light': '#4A4A4A'
+                        ivory: '#FDFBF7',
+                        olive: '#4A5D23',
+                        'olive-dark': '#3A4A1B',
+                        'olive-light': '#6B8E23',
+                        beige: '#E8DFD0',
+                        'beige-light': '#F2EBE0',
+                        charcoal: '#2C2C2C',
+                        'charcoal-light': '#4A4A4A'
                     },
-                    fontFamily: { sans: ['"Noto Sans Armenian"', 'sans-serif'], serif: ['"Noto Serif Armenian"', 'serif'] }
+                    fontFamily: {
+                        sans: ['"Noto Sans Armenian"', 'sans-serif'],
+                        serif: ['"Noto Serif Armenian"', 'serif'],
+                    }
                 }
             }
         }
     </script>
 
     <style>
-        .fade-in-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
-        .hover-lift { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease; }
-        .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(44, 44, 44, 0.12); }
-        ::-webkit-scrollbar { width: 8px; } ::-webkit-scrollbar-track { background: #FDFBF7; } ::-webkit-scrollbar-thumb { background: #4A5D23; border-radius: 4px; }
-        .nav-scrolled { background-color: rgba(253, 251, 247, 0.95); backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(44, 44, 44, 0.12);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #4A5D23; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3A4A1B; }
+        .nav-scrolled {
+            background-color: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body class="bg-ivory text-charcoal font-sans antialiased">
 
+    <!-- Navigation -->
     <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
@@ -44,25 +78,36 @@
                     <span class="font-serif text-2xl font-bold text-white group-hover:text-beige transition-colors drop-shadow-md">LiVA Travel</span>
                     <span class="text-xs font-medium text-white border border-white/50 px-2 py-0.5 rounded-full drop-shadow-md">Armenia</span>
                 </a>
+
                 <nav class="hidden lg:flex items-center space-x-8">
                     <a href="#home" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Գլխավոր</a>
                     <a href="#destinations" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Ուղղություններ</a>
                     <a href="artagna-turer.html" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Արտագնա տուրեր</a>
                     <a href="#tours" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Տուրեր</a>
                     <a href="#armenia" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Հայաստանի բացահայտում</a>
+                    <a href="#about" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Մեր մասին</a>
                     <a href="#contact" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Կապ</a>
                 </nav>
+
                 <div class="hidden lg:flex items-center space-x-6">
                     <div class="flex items-center space-x-2 text-sm font-medium text-white/90 drop-shadow-md">
-                        <button class="text-beige font-bold">HY</button><span class="text-white/50">|</span>
-                        <button class="hover:text-beige transition-colors">EN</button><span class="text-white/50">|</span>
+                        <button class="text-beige font-bold">HY</button>
+                        <span class="text-white/50">|</span>
+                        <button class="hover:text-beige transition-colors">EN</button>
+                        <span class="text-white/50">|</span>
                         <button class="hover:text-beige transition-colors">RU</button>
                     </div>
-                    <a href="#contact" class="bg-olive text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Պլանավորել ուղևորություն</a>
+                    <a href="#contact" class="bg-olive text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Պլանավորել ուղևորություն
+                    </a>
                 </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-white drop-shadow-md"><i data-lucide="menu" class="w-6 h-6"></i></button>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-white drop-shadow-md">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
         </div>
+
         <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-ivory border-t border-beige shadow-lg">
             <div class="px-4 py-6 space-y-4">
                 <a href="#home" class="block text-base font-medium text-charcoal hover:text-olive">Գլխավոր</a>
@@ -70,117 +115,189 @@
                 <a href="artagna-turer.html" class="block text-base font-medium text-charcoal hover:text-olive">Արտագնա տուրեր</a>
                 <a href="#tours" class="block text-base font-medium text-charcoal hover:text-olive">Տուրեր</a>
                 <a href="#armenia" class="block text-base font-medium text-charcoal hover:text-olive">Հայաստանի բացահայտում</a>
+                <a href="#about" class="block text-base font-medium text-charcoal hover:text-olive">Մեր մասին</a>
                 <a href="#contact" class="block text-base font-medium text-charcoal hover:text-olive">Կապ</a>
+                <div class="pt-4 border-t border-beige flex justify-between items-center">
+                    <div class="flex space-x-4 text-sm">
+                        <span class="text-olive font-bold">HY</span>
+                        <span class="text-charcoal-light">EN</span>
+                        <span class="text-charcoal-light">RU</span>
+                    </div>
+                    <a href="#contact" class="bg-olive text-white px-4 py-2 rounded-full text-sm font-medium">Պլանավորել ուղևորություն</a>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- Hero Section with Video Background -->
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1596306499300-0b7b1689b9e6?q=80&w=2070&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover z-0">
             <source src="https://cdn.shopify.com/videos/c/o/v/5dc5198ce5554dab9b0d3c20479ebb8b.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
         <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-ivory z-0"></div>
+        
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="fade-in-up">
-                <span class="inline-block text-beige-light text-sm font-medium tracking-widest uppercase mb-4 border border-beige-light/30 px-4 py-1.5 rounded-full backdrop-blur-sm">Պրեմիում ճանապարհորդություններ Հայաստանից</span>
-                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">Բացահայտեք աշխարհը<br><span class="text-beige">LiVA Travel-ի հետ</span></h1>
-                <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">Մենք ստեղծում ենք անմոռանալի ճանապարհորդություններ՝ սկսած Հայաստանի գեղատեսիլ անկյուններից մինչև աշխարհի ամենահեղինակավոր ուղղությունները։</p>
+                <span class="inline-block text-beige-light text-sm font-medium tracking-widest uppercase mb-4 border border-beige-light/30 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                    Պրեմիում ճանապարհորդություններ Հայաստանից
+                </span>
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    Բացահայտեք աշխարհը<br>
+                    <span class="text-beige">LiVA Travel-ի հետ</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl mx-auto font-light drop-shadow-md">
+                    Մենք ստեղծում ենք անմոռանալի ճանապարհորդություններ՝ սկսած Հայաստանի գեղատեսիլ անկյուններից մինչև աշխարհի ամենահեղինակավոր ուղղությունները։
+                </p>
             </div>
-            <div class="fade-in-up bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8 max-w-6xl mx-auto mt-8 border border-white/20">
+
+            <div class="fade-in-up bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-6 md:p-8 max-w-5xl mx-auto mt-8 border border-white/20">
                 <form class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <div class="space-y-1">
                         <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wider">Մեկնման քաղաք</label>
-                        <select class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none"><option>Երևան</option><option>Գյումրի</option><option>Վանաձոր</option></select>
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wider">Տուրի տեսակ</label>
-                        <select id="heroTourType" class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
-                            <option value="any">Բոլոր տեսակի</option>
-                            <option value="outbound">Արտագնա տուրեր</option>
-                            <option value="inbound">Ներգնա տուրեր</option>
+                        <select class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
+                            <option>Երևան</option>
+                            <option>Գյումրի</option>
+                            <option>Վանաձոր</option>
                         </select>
                     </div>
                     <div class="space-y-1">
                         <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wider">Ուղղություն</label>
-                        <select id="heroDestination" class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
-                            <option value="Ընտրել ուղղություն">Ընտրել ուղղություն</option>
-                            <option value="Վրաստան">Վրաստան</option>
-                            <option value="Հունաստան">Հունաստան</option>
-                            <option value="Իտալիա">Իտալիա</option>
-                            <option value="Ֆրանսիա">Ֆրանսիա</option>
-                            <option value="ԱՄԷ">ԱՄԷ</option>
-                            <option value="Եգիպտոս">Եգիպտոս</option>
-                            <option value="Թուրքիա">Թուրքիա</option>
-                            <option value="Հայաստան">Հայաստան (ներքին տուրեր)</option>
+                        <select class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
+                            <option>Ընտրել ուղղություն</option>
+                            <option>Վրաստան</option>
+                            <option>Հունաստան</option>
+                            <option>Իտալիա</option>
+                            <option>Ֆրանսիա</option>
+                            <option>ԱՄԷ</option>
+                            <option>Եգիպտոս</option>
+                            <option>Թուրքիա</option>
+                            <option>Հայաստան (ներքին տուրեր)</option>
                         </select>
                     </div>
                     <div class="space-y-1">
                         <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wider">Ամսաթվեր</label>
                         <input type="date" class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
                     </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-semibold text-charcoal-light uppercase tracking-wider">Ուղևորներ</label>
+                        <select class="w-full bg-beige-light border-0 rounded-lg px-4 py-3 text-charcoal font-medium focus:ring-2 focus:ring-olive outline-none">
+                            <option>1 Ուղևոր</option>
+                            <option>2 Ուղևոր</option>
+                            <option>3-4 Ուղևոր</option>
+                            <option>5+ Ուղևոր (Խումբ)</option>
+                        </select>
+                    </div>
                     <div class="space-y-1 flex items-end">
-                        <button type="button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="w-full bg-olive text-white font-semibold py-3 rounded-lg hover:bg-olive-dark transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2"><i data-lucide="search" class="w-5 h-5"></i><span>Որոնել</span></button>
+                        <button type="button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="w-full bg-olive text-white font-semibold py-3 rounded-lg hover:bg-olive-dark transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center space-x-2">
+                            <i data-lucide="search" class="w-5 h-5"></i>
+                            <span>Որոնել</span>
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Categories Section -->
     <section id="destinations" class="py-20 md:py-28 bg-ivory">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-4">Ճանապարհորդեք ձեր ոճով</h2>
                 <p class="text-charcoal-light max-w-2xl mx-auto">Ընտրեք ձեզ համար հարմար ճանապարհորդության տեսակը։ Մենք առաջարկում ենք ինչպես պատրաստի փաթեթներ, այնպես էլ անհատական մշակված ծրագրեր։</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift">
                     <a href="artagna-turer.html" class="block absolute inset-0 z-10"></a>
                     <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2070&auto=format&fit=crop" alt="Արտագնա տուրեր" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Արտագնա տուրեր</h3><p class="text-beige text-sm">Բացահայտեք աշխարհը</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Արտագնա տուրեր</h3>
+                        <p class="text-beige text-sm">Բացահայտեք աշխարհը</p>
+                    </div>
                 </div>
+
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift" style="transition-delay: 100ms;">
                     <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_2.jpg?v=1792257481" alt="Ներգնա տուրեր" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Ներգնա տուրեր</h3><p class="text-beige text-sm">Հյուրերի համար Հայաստանում</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Ներգնա տուրեր</h3>
+                        <p class="text-beige text-sm">Հյուրերի համար Հայաստանում</p>
+                    </div>
                 </div>
+
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift" style="transition-delay: 200ms;">
                     <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2070&auto=format&fit=crop" alt="Հանգստյան փաթեթներ" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Հանգստյան փաթեթներ</h3><p class="text-beige text-sm">Ամեն ինչ ներառված է</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Հանգստյան փաթեթներ</h3>
+                        <p class="text-beige text-sm">Ամեն ինչ ներառված է</p>
+                    </div>
                 </div>
+
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift">
                     <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2064&auto=format&fit=crop" alt="Խմբային տուրեր" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Խմբային տուրեր</h3><p class="text-beige text-sm">Միացեք կազմակերպված խմբերին</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Խմբային տուրեր</h3>
+                        <p class="text-beige text-sm">Միացեք կազմակերպված խմբերին</p>
+                    </div>
                 </div>
+
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift" style="transition-delay: 100ms;">
                     <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?q=80&w=1972&auto=format&fit=crop" alt="Հատուկ առաջարկներ" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Հատուկ առաջարկներ</h3><p class="text-beige text-sm">Սահմանափակ ժամանակով զեղչեր</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Հատուկ առաջարկներ</h3>
+                        <p class="text-beige text-sm">Սահմանափակ ժամանակով զեղչեր</p>
+                    </div>
                 </div>
+
                 <div class="fade-in-up group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer hover-lift" style="transition-delay: 200ms;">
                     <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Շաբաթավերջային ուղևորություններ" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent"></div>
-                    <div class="absolute bottom-0 left-0 p-6"><h3 class="font-serif text-xl font-bold text-white mb-1">Շաբաթավերջային ուղևորություններ</h3><p class="text-beige text-sm">Արագ վերալիցքավորում</p></div>
+                    <div class="absolute bottom-0 left-0 p-6">
+                        <h3 class="font-serif text-xl font-bold text-white mb-1">Շաբաթավերջային ուղևորություններ</h3>
+                        <p class="text-beige text-sm">Արագ վերալիցքավորում</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Featured Packages Section -->
     <section id="tours" class="py-20 md:py-28 bg-beige-light/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 fade-in-up">
-                <div><span class="text-olive font-semibold text-sm tracking-wider uppercase mb-2 block">Մեր ընտրանին</span><h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal">Հանրաճանաչ ուղղություններ</h2></div>
+                <div>
+                    <span class="text-olive font-semibold text-sm tracking-wider uppercase mb-2 block">Մեր ընտրանին</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal">Հանրաճանաչ ուղղություններ</h2>
+                </div>
                 <div class="mt-6 md:mt-0 flex flex-wrap gap-3">
-                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none"><option>Բոլոր ուղղությունները</option><option>Եվրոպա</option><option>Ասիա</option><option>Մերձավոր Արևելք</option><option>Հայաստան</option></select>
-                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none"><option>Ցանկացած բյուջե</option><option>մինչև 150,000 ֏</option><option>150,000 - 300,000 ֏</option><option>300,000 ֏-ից բարձր</option></select>
-                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none"><option>Ցանկացած տևողություն</option><option>2-3 օր</option><option>4-7 օր</option><option>8+ օր</option></select>
+                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none">
+                        <option>Բոլոր ուղղությունները</option>
+                        <option>Եվրոպա</option>
+                        <option>Ասիա</option>
+                        <option>Մերձավոր Արևելք</option>
+                        <option>Հայաստան</option>
+                    </select>
+                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none">
+                        <option>Ցանկացած բյուջե</option>
+                        <option>մինչև 150,000 ֏</option>
+                        <option>150,000 - 300,000 ֏</option>
+                        <option>300,000 ֏-ից բարձր</option>
+                    </select>
+                    <select class="bg-white border border-beige rounded-lg px-4 py-2 text-sm text-charcoal focus:ring-2 focus:ring-olive outline-none">
+                        <option>Ցանկացած տևողություն</option>
+                        <option>2-3 օր</option>
+                        <option>4-7 օր</option>
+                        <option>8+ օր</option>
+                    </select>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Package 1: Georgia (LINKED TO georgia.html) -->
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50">
                     <div class="relative aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=2071&auto=format&fit=crop" alt="Թբիլիսի" class="w-full h-full object-cover">
@@ -193,73 +310,97 @@
                         </div>
                         <p class="text-sm text-charcoal-light mb-4">Թբիլիսի և Բաթումի</p>
                         <div class="flex items-center justify-between pt-4 border-t border-beige">
-                            <div><span class="text-xs text-charcoal-light block">Սկսած</span><span class="text-lg font-bold text-olive">120,000 ֏</span></div>
-                            <a href="georgia.html" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors inline-block text-center">Մանրամասն</a>
+                            <div>
+                                <span class="text-xs text-charcoal-light block">Սկսած</span>
+                                <span class="text-lg font-bold text-olive">120,000 ֏</span>
+                            </div>
+                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 2: Greece -->
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 100ms;">
                     <div class="relative aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?q=80&w=2029&auto=format&fit=crop" alt="Սանտորինի" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-white/90 backdrop-blur text-charcoal text-xs font-bold px-3 py-1 rounded-full">Հանգստյան փաթեթ</span>
                     </div>
                     <div class="p-5">
-                        <div class="flex justify-between items-start mb-2"><h3 class="font-serif text-lg font-bold text-charcoal">Հունաստան</h3><span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">7 օր</span></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-lg font-bold text-charcoal">Հունաստան</h3>
+                            <span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">7 օր</span>
+                        </div>
                         <p class="text-sm text-charcoal-light mb-4">Սանտորինի և Աթենք</p>
                         <div class="flex items-center justify-between pt-4 border-t border-beige">
-                            <div><span class="text-xs text-charcoal-light block">Սկսած</span><span class="text-lg font-bold text-olive">450,000 ֏</span></div>
+                            <div>
+                                <span class="text-xs text-charcoal-light block">Սկսած</span>
+                                <span class="text-lg font-bold text-olive">450,000 ֏</span>
+                            </div>
                             <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 3: Italy -->
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 200ms;">
                     <div class="relative aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop" alt="Հռոմ" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-white/90 backdrop-blur text-charcoal text-xs font-bold px-3 py-1 rounded-full">Խմբային տուր</span>
                     </div>
                     <div class="p-5">
-                        <div class="flex justify-between items-start mb-2"><h3 class="font-serif text-lg font-bold text-charcoal">Իտալիա</h3><span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">8 օր</span></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-lg font-bold text-charcoal">Իտալիա</h3>
+                            <span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">8 օր</span>
+                        </div>
                         <p class="text-sm text-charcoal-light mb-4">Հռոմ և Միլան</p>
                         <div class="flex items-center justify-between pt-4 border-t border-beige">
-                            <div><span class="text-xs text-charcoal-light block">Սկսած</span><span class="text-lg font-bold text-olive">550,000 ֏</span></div>
+                            <div>
+                                <span class="text-xs text-charcoal-light block">Սկսած</span>
+                                <span class="text-lg font-bold text-olive">550,000 ֏</span>
+                            </div>
                             <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 4: France -->
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 300ms;">
                     <div class="relative aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop" alt="Փարիզ" class="w-full h-full object-cover">
                         <span class="absolute top-4 left-4 bg-white/90 backdrop-blur text-charcoal text-xs font-bold px-3 py-1 rounded-full">Պրեմիում</span>
                     </div>
                     <div class="p-5">
-                        <div class="flex justify-between items-start mb-2"><h3 class="font-serif text-lg font-bold text-charcoal">Ֆրանսիա</h3><span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">6 օր</span></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-lg font-bold text-charcoal">Ֆրանսիա</h3>
+                            <span class="text-xs text-charcoal-light bg-beige-light px-2 py-1 rounded">6 օր</span>
+                        </div>
                         <p class="text-sm text-charcoal-light mb-4">Փարիզ</p>
                         <div class="flex items-center justify-between pt-4 border-t border-beige">
-                            <div><span class="text-xs text-charcoal-light block">Սկսած</span><span class="text-lg font-bold text-olive">600,000 ֏</span></div>
+                            <div>
+                                <span class="text-xs text-charcoal-light block">Սկսած</span>
+                                <span class="text-lg font-bold text-olive">600,000 ֏</span>
+                            </div>
                             <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- View All Outbound Tours Button -->
             <div class="mt-12 text-center fade-in-up">
                 <a href="artagna-turer.html" class="inline-flex items-center gap-2 bg-olive text-white px-8 py-3 rounded-full font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    <span>Դիտել բոլոր արտագնա տուրերը</span><i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <span>Դիտել բոլոր արտագնա տուրերը</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <div class="mt-8 p-4 bg-beige-light/50 rounded-lg border border-beige text-center fade-in-up">
-                <p class="text-sm text-charcoal-light flex items-center justify-center gap-2"><i data-lucide="info" class="w-4 h-4 text-olive"></i><span>* Գները նշված են որպես նմուշային և կարող են փոխվել։ Թռիչքները, հյուրանոցները, վիզաները և կոնկրետ ամսաթվերը դեռևս հաստատված չեն և կճշտվեն ձեր հարցման հիման վրա։</span></p>
+                <p class="text-sm text-charcoal-light flex items-center justify-center gap-2">
+                    <i data-lucide="info" class="w-4 h-4 text-olive"></i>
+                    <span>* Գները նշված են որպես նմուշային և կարող են փոխվել։ Թռիչքները, հյուրանոցները, վիզաները և կոնկրետ ամսաթվերը դեռևս հաստատված չեն և կճշտվեն ձեր հարցման հիման վրա։</span>
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Discover Armenia Section -->
     <section id="armenia" class="py-20 md:py-28 bg-ivory">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 fade-in-up">
@@ -267,104 +408,271 @@
                 <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-4">Բացահայտեք Հայաստանը</h2>
                 <p class="text-charcoal-light max-w-2xl mx-auto">Մենք հպարտանում ենք մեր երկրով։ Ընտրեք ձեր հաջորդ ներքին ուղևորությունը մեր հատուկ մշակված ծրագրերից։</p>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50">
-                    <div class="relative aspect-[4/3]"><img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/Trip_to_Armenia_-_Custom_Armenia_vacations.jpg?v=1792256601" alt="Սևան" class="w-full h-full object-cover"><span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Ներգնա տուր</span></div>
-                    <div class="p-5"><h3 class="font-serif text-lg font-bold text-charcoal mb-2">Սևան</h3><p class="text-sm text-charcoal-light mb-4">Հայկական ծովի կապույտ գոհարը։ Վայելեք լճի ափին հանգիստը և տեղական իշխան ձուկը։</p><div class="flex items-center justify-between pt-4 border-t border-beige"><span class="text-lg font-bold text-olive">Սկսած 45,000 ֏</span><button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button></div></div>
+                    <div class="relative aspect-[4/3]">
+                        <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/Trip_to_Armenia_-_Custom_Armenia_vacations.jpg?v=1792256601" alt="Սևան" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Ներգնա տուր</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-charcoal mb-2">Սևան</h3>
+                        <p class="text-sm text-charcoal-light mb-4">Հայկական ծովի կապույտ գոհարը։ Վայելեք լճի ափին հանգիստը և տեղական իշխան ձուկը։</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-beige">
+                            <span class="text-lg font-bold text-olive">Սկսած 45,000 ֏</span>
+                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 100ms;">
-                    <div class="relative aspect-[4/3]"><img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/What_to_see_and_do_in_Tsaghkadzor___Kecharis_Monastery_depicted___Armenia_Discovery.jpg?v=1792256601" alt="Ծաղկաձոր" class="w-full h-full object-cover"><span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Ակտիվ հանգիստ</span></div>
-                    <div class="p-5"><h3 class="font-serif text-lg font-bold text-charcoal mb-2">Ծաղկաձոր</h3><p class="text-sm text-charcoal-light mb-4">Լեռնային առողջարան և սպորտի կենտրոն։ Ռոպեուղի, հեծանվային արահետներ և մաքուր օդ։</p><div class="flex items-center justify-between pt-4 border-t border-beige"><span class="text-lg font-bold text-olive">Սկսած 55,000 ֏</span><button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button></div></div>
+                    <div class="relative aspect-[4/3]">
+                        <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/What_to_see_and_do_in_Tsaghkadzor___Kecharis_Monastery_depicted___Armenia_Discovery.jpg?v=1792256601" alt="Ծաղկաձոր" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Ակտիվ հանգիստ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-charcoal mb-2">Ծաղկաձոր</h3>
+                        <p class="text-sm text-charcoal-light mb-4">Լեռնային առողջարան և սպորտի կենտրոն։ Ռոպեուղի, հեծանվային արահետներ և մաքուր օդ։</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-beige">
+                            <span class="text-lg font-bold text-olive">Սկսած 55,000 ֏</span>
+                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 200ms;">
-                    <div class="relative aspect-[4/3]"><img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/The_Temple_of_Garni_is_a_first_century_Hellenic_temple.jpg?v=1792256601" alt="Գառնի" class="w-full h-full object-cover"><span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Պատմական</span></div>
-                    <div class="p-5"><h3 class="font-serif text-lg font-bold text-charcoal mb-2">Գառնի և Գեղարդ</h3><p class="text-sm text-charcoal-light mb-4">Այցելեք հեթանոսական Գառնու տաճարը և ժայռափոր Գեղարդի վանական համալիրը։</p><div class="flex items-center justify-between pt-4 border-t border-beige"><span class="text-lg font-bold text-olive">Սկսած 40,000 ֏</span><button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button></div></div>
+                    <div class="relative aspect-[4/3]">
+                        <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/The_Temple_of_Garni_is_a_first_century_Hellenic_temple.jpg?v=1792256601" alt="Գառնի" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Պատմական</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-charcoal mb-2">Գառնի և Գեղարդ</h3>
+                        <p class="text-sm text-charcoal-light mb-4">Այցելեք հեթանոսական Գառնու տաճարը և ժայռափոր Գեղարդի վանական համալիրը։</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-beige">
+                            <span class="text-lg font-bold text-olive">Սկսած 40,000 ֏</span>
+                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="fade-in-up bg-white rounded-2xl overflow-hidden shadow-sm hover-lift border border-beige/50" style="transition-delay: 300ms;">
-                    <div class="relative aspect-[4/3]"><img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_1_d89d17af-b7dc-4f40-a952-93ed181b2a6c.jpg?v=1792256770" alt="Դիլիջան" class="w-full h-full object-cover"><span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Էկո տուրիզմ</span></div>
-                    <div class="p-5"><h3 class="font-serif text-lg font-bold text-charcoal mb-2">Դիլիջան</h3><p class="text-sm text-charcoal-light mb-4">«Հայկական Շվեյցարիա»։ Խիտ անտառներ, Հաղարծինի վանք և ավանդական արհեստներ։</p><div class="flex items-center justify-between pt-4 border-t border-beige"><span class="text-lg font-bold text-olive">Սկսած 50,000 ֏</span><button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button></div></div>
+                    <div class="relative aspect-[4/3]">
+                        <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_1_d89d17af-b7dc-4f40-a952-93ed181b2a6c.jpg?v=1792256770" alt="Դիլիջան" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-olive/90 backdrop-blur text-white text-xs font-bold px-3 py-1 rounded-full">Էկո տուրիզմ</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-serif text-lg font-bold text-charcoal mb-2">Դիլիջան</h3>
+                        <p class="text-sm text-charcoal-light mb-4">«Հայկական Շվեյցարիա»։ Խիտ անտառներ, Հաղարծինի վանք և ավանդական արհեստներ։</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-beige">
+                            <span class="text-lg font-bold text-olive">Սկսած 50,000 ֏</span>
+                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-3 py-1.5 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- How It Works -->
     <section id="about" class="py-20 md:py-28 bg-beige-light/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16 fade-in-up"><h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-4">Ինչպես է աշխատում LiVA Travel-ը</h2><p class="text-charcoal-light max-w-2xl mx-auto">Ձեր իդեալական ճանապարհորդությունը ընդամենը 4 պարզ քայլ հեռավորության վրա է։</p></div>
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-4">Ինչպես է աշխատում LiVA Travel-ը</h2>
+                <p class="text-charcoal-light max-w-2xl mx-auto">Ձեր իդեալական ճանապարհորդությունը ընդամենը 4 պարզ քայլ հեռավորության վրա է։</p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift"><div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive"><i data-lucide="map-pin" class="w-8 h-8"></i></div><div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 01</div><h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ընտրեք ուղղությունը</h3><p class="text-sm text-charcoal-light">Ուսումնասիրեք մեր առաջարկները կամ կիսվեք ձեր երազանքների ուղղությամբ։</p></div>
-                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 100ms;"><div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive"><i data-lucide="sliders" class="w-8 h-8"></i></div><div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 02</div><h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ձևավորեք փաթեթը</h3><p class="text-sm text-charcoal-light">Մեր մասնագետները կհարմարեցնեն ծրագիրը ձեր բյուջեին և նախասիրություններին։</p></div>
-                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 200ms;"><div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive"><i data-lucide="credit-card" class="w-8 h-8"></i></div><div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 03</div><h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ամրագրեք և վճարեք</h3><p class="text-sm text-charcoal-light">Անվտանգ վճարում և ակնթարթային հաստատում բոլոր փաստաթղթերի համար։</p></div>
-                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 300ms;"><div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive"><i data-lucide="plane" class="w-8 h-8"></i></div><div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 04</div><h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ճանապարհորդեք</h3><p class="text-sm text-charcoal-light">Վայելեք ձեր ուղևորությունը՝ LiVA Travel-ի 24/7 աջակցությամբ։</p></div>
+                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive">
+                        <i data-lucide="map-pin" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 01</div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ընտրեք ուղղությունը</h3>
+                    <p class="text-sm text-charcoal-light">Ուսումնասիրեք մեր առաջարկները կամ կիսվեք ձեր երազանքների ուղղությամբ։</p>
+                </div>
+
+                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive">
+                        <i data-lucide="sliders" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 02</div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ձևավորեք փաթեթը</h3>
+                    <p class="text-sm text-charcoal-light">Մեր մասնագետները կհարմարեցնեն ծրագիրը ձեր բյուջեին և նախասիրություններին։</p>
+                </div>
+
+                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive">
+                        <i data-lucide="credit-card" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 03</div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ամրագրեք և վճարեք</h3>
+                    <p class="text-sm text-charcoal-light">Անվտանգ վճարում և ակնթարթային հաստատում բոլոր փաստաթղթերի համար։</p>
+                </div>
+
+                <div class="fade-in-up text-center p-6 rounded-2xl bg-white border border-beige/50 hover-lift" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 bg-beige-light rounded-full flex items-center justify-center mx-auto mb-4 text-olive">
+                        <i data-lucide="plane" class="w-8 h-8"></i>
+                    </div>
+                    <div class="text-xs font-bold text-olive uppercase tracking-wider mb-2">Քայլ 04</div>
+                    <h3 class="font-serif text-xl font-bold text-charcoal mb-2">Ճանապարհորդեք</h3>
+                    <p class="text-sm text-charcoal-light">Վայելեք ձեր ուղևորությունը՝ LiVA Travel-ի 24/7 աջակցությամբ։</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact / Inquiry Form Section -->
     <section id="contact" class="py-20 md:py-28 bg-ivory">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
                 <div class="fade-in-up">
                     <span class="text-olive font-semibold text-sm tracking-wider uppercase mb-2 block">Կապ մեզ հետ</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">Պլանավորենք ձեր հաջորդ ուղևորությունը</h2>
-                    <p class="text-charcoal-light mb-8 leading-relaxed">Լրացրեք հարցման ձևը, և մեր ճանապարհորդական խորհրդատուները կկապվեն ձեզ հետ 24 ժամվա ընթացքում՝ առաջարկելով անհատականացված լուծումներ։</p>
+                    <p class="text-charcoal-light mb-8 leading-relaxed">
+                        Լրացրեք հարցման ձևը, և մեր ճանապարհորդական խորհրդատուները կկապվեն ձեզ հետ 24 ժամվա ընթացքում՝ առաջարկելով անհատականացված լուծումներ։
+                    </p>
+
                     <div class="space-y-6 mb-8">
-                        <div class="flex items-start space-x-4"><div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive"><i data-lucide="phone" class="w-5 h-5"></i></div><div><h4 class="font-semibold text-charcoal">Հեռախոս</h4><p class="text-charcoal-light">+374 93 230141</p></div></div>
-                        <div class="flex items-start space-x-4"><div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive"><i data-lucide="mail" class="w-5 h-5"></i></div><div><h4 class="font-semibold text-charcoal">Էլ. հասցե</h4><p class="text-charcoal-light">[Տեղադրել էլ. հասցե]</p></div></div>
-                        <div class="flex items-start space-x-4"><div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive"><i data-lucide="map-pin" class="w-5 h-5"></i></div><div><h4 class="font-semibold text-charcoal">Գրասենյակ</h4><p class="text-charcoal-light">[Տեղադրել հասցե, Երևան, Հայաստան]</p></div></div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Հեռախոս</h4>
+                                <p class="text-charcoal-light">+374 93 230141</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Էլ. հասցե</h4>
+                                <p class="text-charcoal-light">[Տեղադրել էլ. հասցե]</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Գրասենյակ</h4>
+                                <p class="text-charcoal-light">[Տեղադրել հասցե, Երևան, Հայաստան]</p>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://wa.me/37493230141" target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-full font-medium hover:bg-[#128C7E] transition-all duration-300 shadow-md"><i data-lucide="message-circle" class="w-5 h-5"></i><span>Գրել WhatsApp-ով</span></a>
+
+                    <a href="https://wa.me/37493230141" target="_blank" class="inline-flex items-center gap-3 bg-[#25D366] text-white px-6 py-3 rounded-full font-medium hover:bg-[#128C7E] transition-all duration-300 shadow-md">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Գրել WhatsApp-ով</span>
+                    </a>
                 </div>
 
                 <div class="fade-in-up bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-beige/50" style="transition-delay: 100ms;">
                     <form id="inquiryForm" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div><label class="block text-sm font-medium text-charcoal mb-2">Անուն Ազգանուն *</label><input type="text" name="name" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Ձեր անունը"></div>
-                            <div><label class="block text-sm font-medium text-charcoal mb-2">Հեռախոսահամար *</label><input type="tel" name="phone" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="+374 __ ______"></div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Անուն Ազգանուն *</label>
+                                <input type="text" name="name" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Ձեր անունը">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Հեռախոսահամար *</label>
+                                <input type="tel" name="phone" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="+374 __ ______">
+                            </div>
                         </div>
-                        <div><label class="block text-sm font-medium text-charcoal mb-2">Էլ. հասցե</label><input type="email" name="email" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="example@email.com"></div>
-                        
-                        <!-- NEW: Tour Type Auto-Suggest Logic -->
+
+                        <div>
+                            <label class="block text-sm font-medium text-charcoal mb-2">Էլ. հասցե</label>
+                            <input type="email" name="email" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="example@email.com">
+                        </div>
+
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <label class="block text-sm font-medium text-charcoal mb-2">Տուրի տեսակ</label>
-                                <select id="contactTourType" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
-                                    <option value="any">Ընտրել տուրի տեսակը</option>
-                                    <option value="outbound">Արտագնա տուրեր</option>
-                                    <option value="inbound">Ներգնա տուրեր</option>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Մեկնման քաղաք *</label>
+                                <select name="departure" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                                    <option value="Երևան">Երևան</option>
+                                    <option value="Գյումրի">Գյումրի</option>
+                                    <option value="Վանաձոր">Վանաձոր</option>
+                                    <option value="Այլ">Այլ</option>
                                 </select>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-charcoal mb-2">Ցանկալի ուղղություն *</label>
-                                <input type="text" id="contactDestination" name="destination" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Օրինակ՝ Վրաստան, Սևան">
+                                <input type="text" name="destination" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Օրինակ՝ Թբիլիսի, Սևան, Գառնի">
                             </div>
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div><label class="block text-sm font-medium text-charcoal mb-2">Ուղևորության ամսաթվեր</label><input type="date" name="dates" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all"></div>
-                            <div><label class="block text-sm font-medium text-charcoal mb-2">Ուղևորների քանակ</label><select name="travelers" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all"><option value="1">1</option><option value="2">2</option><option value="3-4">3-4</option><option value="5+">5+</option></select></div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Ուղևորության ամսաթվեր</label>
+                                <input type="date" name="dates" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Ուղևորների քանակ</label>
+                                <select name="travelers" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3-4">3-4</option>
+                                    <option value="5+">5+</option>
+                                </select>
+                            </div>
                         </div>
-                        <div><label class="block text-sm font-medium text-charcoal mb-2">Մոտավոր բյուջե (մեկ անձի համար)</label><select name="budget" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all"><option value="Մինչև 100,000 ֏">Մինչև 100,000 ֏</option><option value="100,000 - 250,000 ֏">100,000 - 250,000 ֏</option><option value="250,000 - 500,000 ֏">250,000 - 500,000 ֏</option><option value="500,000 ֏-ից բարձր">500,000 ֏-ից բարձր</option><option value="Կարիք ունեմ խորհրդատվության">Կարիք ունեմ խորհրդատվության</option></select></div>
-                        <div><label class="block text-sm font-medium text-charcoal mb-2">Լրացուցիչ մանրամասներ</label><textarea name="details" rows="4" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Նկարագրեք ձեր ցանկությունները, հատուկ պահանջներ կամ հարցեր..."></textarea></div>
-                        <button type="submit" class="w-full bg-olive text-white font-bold py-4 rounded-lg hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"><span>Ուղարկել հարցում</span><i data-lucide="send" class="w-4 h-4"></i></button>
-                        <p class="text-xs text-charcoal-light text-center">Սեղմելով «Ուղարկել հարցում»՝ դուք համաձայնում եք մեր գաղտնիության քաղաքականության հետ։</p>
+
+                        <div>
+                            <label class="block text-sm font-medium text-charcoal mb-2">Մոտավոր բյուջե (մեկ անձի համար)</label>
+                            <select name="budget" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                                <option value="Մինչև 100,000 ֏">Մինչև 100,000 ֏</option>
+                                <option value="100,000 - 250,000 ֏">100,000 - 250,000 ֏</option>
+                                <option value="250,000 - 500,000 ֏">250,000 - 500,000 ֏</option>
+                                <option value="500,000 ֏-ից բարձր">500,000 ֏-ից բարձր</option>
+                                <option value="Կարիք ունեմ խորհրդատվության">Կարիք ունեմ խորհրդատվության</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-charcoal mb-2">Լրացուցիչ մանրամասներ</label>
+                            <textarea name="details" rows="4" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Նկարագրեք ձեր ցանկությունները, հատուկ պահանջներ կամ հարցեր..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-olive text-white font-bold py-4 rounded-lg hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <span>Ուղարկել հարցում</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                        
+                        <p class="text-xs text-charcoal-light text-center">
+                            Սեղմելով «Ուղարկել հարցում»՝ դուք համաձայնում եք մեր գաղտնիության քաղաքականության հետ։
+                        </p>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-charcoal text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <div class="flex items-center space-x-2 mb-6"><span class="font-serif text-2xl font-bold text-white">LiVA Travel</span><span class="text-xs font-medium text-beige border border-beige px-2 py-0.5 rounded-full">Armenia</span></div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Պրեմիում ճանապարհորդական գործակալություն Հայաստանում։ Մենք ստեղծում ենք անմոռանալի փորձառություններ՝ սկսած տեղական գեղատեսիլ վայրերից մինչև աշխարհի լավագույն ուղղությունները։</p>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <span class="font-serif text-2xl font-bold text-white">LiVA Travel</span>
+                        <span class="text-xs font-medium text-beige border border-beige px-2 py-0.5 rounded-full">Armenia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Պրեմիում ճանապարհորդական գործակալություն Հայաստանում։ Մենք ստեղծում ենք անմոռանալի փորձառություններ՝ սկսած տեղական գեղատեսիլ վայրերից մինչև աշխարհի լավագույն ուղղությունները։
+                    </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-olive transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
                     </div>
                 </div>
+
                 <div>
                     <h4 class="font-serif text-lg font-bold mb-6 text-beige">Արագ հղումներ</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
@@ -376,6 +684,7 @@
                         <li><a href="#about" class="hover:text-white transition-colors">Մեր մասին</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="font-serif text-lg font-bold mb-6 text-beige">Ծառայություններ</h4>
                     <ul class="space-y-3 text-sm text-gray-400">
@@ -386,17 +695,30 @@
                         <li><a href="#" class="hover:text-white transition-colors">Վիզային աջակցություն</a></li>
                     </ul>
                 </div>
+
                 <div>
                     <h4 class="font-serif text-lg font-bold mb-6 text-beige">Կապ</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li class="flex items-start space-x-3"><i data-lucide="map-pin" class="w-5 h-5 text-olive flex-shrink-0 mt-0.5"></i><span>[Տեղադրել հասցե, Երևան, Հայաստան]</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="phone" class="w-5 h-5 text-olive flex-shrink-0"></i><span>+374 93 230141</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="mail" class="w-5 h-5 text-olive flex-shrink-0"></i><span>[Տեղադրել էլ. հասցե]</span></li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span>[Տեղադրել հասցե, Երևան, Հայաստան]</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-olive flex-shrink-0"></i>
+                            <span>+374 93 230141</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-olive flex-shrink-0"></i>
+                            <span>[Տեղադրել էլ. հասցե]</span>
+                        </li>
                     </ul>
                 </div>
             </div>
+
             <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-gray-500">&copy; 2026 LiVA Travel Armenia. Բոլոր իրավունքները պաշտպանված են։</p>
+                <p class="text-sm text-gray-500">
+                    &copy; 2026 LiVA Travel Armenia. Բոլոր իրավունքները պաշտպանված են։
+                </p>
                 <div class="flex space-x-6 text-sm text-gray-500">
                     <a href="#" class="hover:text-white transition-colors">Գաղտնիության քաղաքականություն</a>
                     <a href="#" class="hover:text-white transition-colors">Օգտագործման պայմաններ</a>
@@ -405,69 +727,109 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
+
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('nav-scrolled'); navbar.classList.remove('py-4'); navbar.classList.add('py-2');
-                navbar.querySelectorAll('a, span, button').forEach(el => { if (!el.classList.contains('bg-olive') && !el.classList.contains('text-olive')) { el.classList.remove('text-white', 'text-white/90', 'text-white/50', 'drop-shadow-md'); el.classList.add('text-charcoal', 'text-charcoal-light'); } });
-                navbar.querySelector('.font-serif').classList.remove('text-white'); navbar.querySelector('.font-serif').classList.add('text-charcoal');
-                navbar.querySelector('.border-white\\/50').classList.remove('border-white/50', 'text-white'); navbar.querySelector('.border-white\\/50').classList.add('border-olive', 'text-olive');
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+                navbar.querySelectorAll('a, span, button').forEach(el => {
+                    if (!el.classList.contains('bg-olive') && !el.classList.contains('text-olive')) {
+                        el.classList.remove('text-white', 'text-white/90', 'text-white/50', 'drop-shadow-md');
+                        el.classList.add('text-charcoal', 'text-charcoal-light');
+                    }
+                });
+                navbar.querySelector('.font-serif').classList.remove('text-white');
+                navbar.querySelector('.font-serif').classList.add('text-charcoal');
+                navbar.querySelector('.border-white\\/50').classList.remove('border-white/50', 'text-white');
+                navbar.querySelector('.border-white\\/50').classList.add('border-olive', 'text-olive');
             } else {
-                navbar.classList.remove('nav-scrolled'); navbar.classList.remove('py-2'); navbar.classList.add('py-4');
-                navbar.querySelectorAll('a, span, button').forEach(el => { if (!el.classList.contains('bg-olive') && !el.classList.contains('text-olive')) { el.classList.remove('text-charcoal', 'text-charcoal-light'); el.classList.add('text-white', 'drop-shadow-md'); } });
-                navbar.querySelectorAll('span.text-white\\/50').forEach(el => { el.classList.remove('text-white'); el.classList.add('text-white/50'); });
-                navbar.querySelector('.font-serif').classList.add('text-white'); navbar.querySelector('.font-serif').classList.remove('text-charcoal');
-                navbar.querySelector('.border-olive').classList.add('border-white/50', 'text-white'); navbar.querySelector('.border-olive').classList.remove('border-olive', 'text-olive');
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+                navbar.querySelectorAll('a, span, button').forEach(el => {
+                    if (!el.classList.contains('bg-olive') && !el.classList.contains('text-olive')) {
+                        el.classList.remove('text-charcoal', 'text-charcoal-light');
+                        el.classList.add('text-white', 'drop-shadow-md');
+                    }
+                });
+                navbar.querySelectorAll('span.text-white\\/50').forEach(el => {
+                    el.classList.remove('text-white');
+                    el.classList.add('text-white/50');
+                });
+                navbar.querySelector('.font-serif').classList.add('text-white');
+                navbar.querySelector('.font-serif').classList.remove('text-charcoal');
+                navbar.querySelector('.border-olive').classList.add('border-white/50', 'text-white');
+                navbar.querySelector('.border-olive').classList.remove('border-olive', 'text-olive');
             }
         });
+
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
         document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); mobileMenu.classList.add('hidden'); } }); });
-        
-        // AUTO-SUGGEST LOGIC
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
         document.addEventListener('DOMContentLoaded', function() {
-            // Hero Form Auto-Suggest
-            const heroTourType = document.getElementById('heroTourType');
-            const heroDestination = document.getElementById('heroDestination');
-            if (heroTourType && heroDestination) {
-                heroTourType.addEventListener('change', function() {
-                    if (this.value === 'outbound') {
-                        heroDestination.value = 'Վրաստան'; // Automatically suggests Georgia
-                    } else if (this.value === 'inbound') {
-                        heroDestination.value = 'Հայաստան';
-                    } else {
-                        heroDestination.value = 'Ընտրել ուղղություն';
-                    }
-                });
-            }
-
-            // Contact Form Auto-Suggest
-            const contactTourType = document.getElementById('contactTourType');
-            const contactDestination = document.getElementById('contactDestination');
-            if (contactTourType && contactDestination) {
-                contactTourType.addEventListener('change', function() {
-                    if (this.value === 'outbound') {
-                        contactDestination.value = 'Վրաստան (Թբիլիսի և Բաթումի)'; // Automatically suggests Georgia
-                    } else if (this.value === 'inbound') {
-                        contactDestination.value = 'Հայաստան (Սևան, Ծաղկաձոր, Դիլիջան)';
-                    }
-                });
-            }
-
-            // WhatsApp Form Submission Logic
             const form = document.getElementById('inquiryForm');
             if (form) {
                 form.addEventListener('submit', function(e) {
                     e.preventDefault();
+                    
                     const formData = new FormData(form);
-                    const message = `👋 *Նոր հարցում LiVA Travel-ից*%0A%0A👤 *Անուն:* ${formData.get('name') || 'N/A'}%0A📞 *Հեռախոս:* ${formData.get('phone') || 'N/A'}%0A📧 *Էլ. հասցե:* ${formData.get('email') || 'N/A'}%0A📍 *Ուղղություն:* ${formData.get('destination') || 'N/A'}%0A📅 *Ամսաթվեր:* ${formData.get('dates') || 'N/A'}%0A👥 *Ուղևորներ:* ${formData.get('travelers') || 'N/A'}%0A💰 *Բյուջե:* ${formData.get('budget') || 'N/A'}%0A📝 *Մանրամասն:* ${formData.get('details') || 'N/A'}`;
-                    window.open(`https://wa.me/37493230141?text=${message}`, '_blank');
-                    alert('Շնորհակալություն։ WhatsApp-ը կբացվի նոր պատուհանում՝ ձեր հարցմամբ։ Խնդրում ենք սեղմել "Send" (Ուղարկել)։');
+                    const name = formData.get('name') || 'N/A';
+                    const phone = formData.get('phone') || 'N/A';
+                    const email = formData.get('email') || 'N/A';
+                    const departure = formData.get('departure') || 'N/A';
+                    const destination = formData.get('destination') || 'N/A';
+                    const dates = formData.get('dates') || 'N/A';
+                    const travelers = formData.get('travelers') || 'N/A';
+                    const budget = formData.get('budget') || 'N/A';
+                    const details = formData.get('details') || 'N/A';
+
+                    const message = `👋 *Նոր հարցում LiVA Travel-ից*%0A%0A` +
+                                    `👤 *Անուdelays:* ${name}%0A` +
+                                    `📞 *Հdelays:* ${phone}%0A` +
+                                    `📧 *Էdelays. hdelays:* ${email}%0A` +
+                                    `🛫 *Մdelays:* ${departure}%0A` +
+                                    `📍 *Ոdelays:* ${destination}%0A` +
+                                    `📅 *Աdelays:* ${dates}%0A` +
+                                    `👥 *Ոdelays:* ${travelers}%0A` +
+                                    `💰 *Բdelays:* ${budget}%0A` +
+                                    `📝 *Մdelays:* ${details}`;
+
+                    const whatsappNumber = '37493230141';
+                    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+                    
+                    window.open(whatsappURL, '_blank');
+                    
+                    alert('Շնdelays։ WhatsApp-delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays......');
                     form.reset();
                 });
             }
