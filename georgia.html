@@ -1,1 +1,501 @@
+<!DOCTYPE html>
+<html lang="hy" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Շրջագայություն դեպի Վրաստան (Թբիլիսի և Բաթումի) | LiVA Travel Armenia</title>
+    <meta name="description" content="5-օրյա պրեմիում շրջագայություն դեպի Վրաստան։ Թբիլիսիի հին թաղամաս, Նարիկալա, Բաթումի և Սև ծով։ Ներառված է տրանսֆեր, հյուրանոց և էքսկուրսիաներ։">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Noto Sans Armenian & Noto Serif Armenian -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@300;400;500;600;700&family=Noto+Serif+Armenian:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#FDFBF7',
+                        olive: '#4A5D23',
+                        'olive-dark': '#3A4A1B',
+                        'olive-light': '#6B8E23',
+                        beige: '#E8DFD0',
+                        'beige-light': '#F2EBE0',
+                        charcoal: '#2C2C2C',
+                        'charcoal-light': '#4A4A4A'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans Armenian"', 'sans-serif'],
+                        serif: ['"Noto Serif Armenian"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(44, 44, 44, 0.12);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #4A5D23; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #3A4A1B; }
+        .nav-scrolled {
+            background-color: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="bg-ivory text-charcoal font-sans antialiased">
+
+    <!-- Navigation -->
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-4 bg-ivory/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2 group">
+                    <span class="font-serif text-2xl font-bold text-charcoal group-hover:text-olive transition-colors">LiVA Travel</span>
+                    <span class="text-xs font-medium text-olive border border-olive px-2 py-0.5 rounded-full">Armenia</span>
+                </a>
+
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-medium text-charcoal hover:text-olive transition-colors">Գլխավոր</a>
+                    <a href="artagna-turer.html" class="text-sm font-medium text-charcoal hover:text-olive transition-colors">Արտագնա տուրեր</a>
+                    <a href="index.html#armenia" class="text-sm font-medium text-charcoal hover:text-olive transition-colors">Հայաստանի բացահայտում</a>
+                    <a href="#booking" class="text-sm font-medium text-charcoal hover:text-olive transition-colors">Ամրագրել</a>
+                </nav>
+
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#booking" class="bg-olive text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Պլանավորել ուղևորություն
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-charcoal">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden absolute top-full left-0 w-full bg-ivory border-t border-beige shadow-lg">
+            <div class="px-4 py-6 space-y-4">
+                <a href="index.html" class="block text-base font-medium text-charcoal hover:text-olive">Գլխավոր</a>
+                <a href="artagna-turer.html" class="block text-base font-medium text-charcoal hover:text-olive">Արտագնա տուրեր</a>
+                <a href="index.html#armenia" class="block text-base font-medium text-charcoal hover:text-olive">Հայաստանի բացահայտում</a>
+                <a href="#booking" class="block text-base font-medium text-olive font-bold">Ամրագրել այս տուրը</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/GEORGIA_Tbilisi.jpg?v=1792260977" alt="Թբիլիսի, Վրաստան" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-charcoal/30"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in-up">
+                <span class="inline-block text-beige text-sm font-medium tracking-widest uppercase mb-4 border border-beige/30 px-4 py-1.5 rounded-full backdrop-blur-sm">
+                    Արտագնա տուր • 5 օր / 4 գիշեր
+                </span>
+                <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    Բացահայտեք Վրաստանը<br>
+                    <span class="text-beige">Թբիլիսի և Բաթումի</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto font-light drop-shadow-md">
+                    Պատմական թաղամասեր, ժամանակակից ճարտարապետություն և Սև ծովի ափին անմոռանալի հանգիստ՝ ամեն ինչ մեկ շրջագայության մեջ։
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#booking" class="bg-olive text-white px-8 py-3.5 rounded-full font-semibold hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <span>Ամրագրել այս տուրը</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="https://wa.me/37493230141?text=Բարև%20Ձեզ,%20հետաքրքրված%20եմ%20Վրաստանի%20տուրով:" target="_blank" class="bg-white/10 backdrop-blur text-white border border-white/30 px-8 py-3.5 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Հարցնել WhatsApp-ով</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Overview & Gallery -->
+    <section class="py-20 md:py-28 bg-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
+                <div class="fade-in-up">
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">Եվրոպական հմայք՝ հարևանի դռան մոտ</h2>
+                    <p class="text-charcoal-light leading-relaxed mb-6">
+                        Վրաստանը իդեալական ուղղություն է կարճ, բայց հագեցած հանգստի համար։ Այս շրջագայության ընթացքում դուք կզգաք Թբիլիսիի՝ «Եվրոպայի թաքնված գոհարի» յուրահատուկ մթնոլորտը, կբարձրանաք Նարիկալա բերդ՝ վայելելով քաղաքի համայնապատկերը, և կիջնեք դեպի Բաթումի՝ Սև ծովի ժամանակակից մարգարիտ։
+                    </p>
+                    <p class="text-charcoal-light leading-relaxed mb-8">
+                        Մենք հոգ ենք տարել ամեն ինչի մասին՝ հարմարավետ տրանսֆերից և կենտրոնական հյուրանոցներից մինչև պրոֆեսիոնալ ուղեկցորդ և տեղական լավագույն ռեստորանների առաջարկներ։
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive mt-1">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Տևողություն</h4>
+                                <p class="text-sm text-charcoal-light">5 օր / 4 գիշեր</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive mt-1">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Խմբի չափը</h4>
+                                <p class="text-sm text-charcoal-light">Մինչև 15 հոգի</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive mt-1">
+                                <i data-lucide="utensils" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Սնունդ</h4>
+                                <p class="text-sm text-charcoal-light">Ամենօրյա նախաճաշ</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive mt-1">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Ապահովագրություն</h4>
+                                <p class="text-sm text-charcoal-light">Ներառված է գնի մեջ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-in-up grid grid-cols-2 gap-4" style="transition-delay: 200ms;">
+                    <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/Tbilisi_Georgia_Europe_s_Hidden_Gem_for_2026.jpg?v=1792260977" alt="Թբիլիսիի համայնապատկեր" class="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift mt-8">
+                    <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_3.jpg?v=1792260972" alt="Վրացական հյուրընկալություն" class="rounded-2xl shadow-lg w-full h-64 object-cover hover-lift">
+                </div>
+            </div>
+
+            <!-- Itinerary -->
+            <div class="mb-20">
+                <h3 class="font-serif text-3xl font-bold text-charcoal text-center mb-12 fade-in-up">Շրջագայության ծրագիր</h3>
+                <div class="space-y-8 max-w-4xl mx-auto">
+                    <!-- Day 1 -->
+                    <div class="fade-in-up flex gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-olive text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">01</div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-beige/50 flex-1 hover-lift">
+                            <h4 class="font-serif text-xl font-bold text-charcoal mb-2">Ժամանում և Թբիլիսիի հին թաղամաս</h4>
+                            <p class="text-charcoal-light">Ժամանում Թբիլիսի, տեղափոխում հյուրանոց։ Երեկոյան ծանոթացում Նարիկալա բերդին, Աբանոթուբանի (ծծմբային բաղնիքներ) և հին Թբիլիսիի սրճարաններին։</p>
+                        </div>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="fade-in-up flex gap-6" style="transition-delay: 100ms;">
+                        <div class="flex-shrink-0 w-16 h-16 bg-olive text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">02</div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-beige/50 flex-1 hover-lift">
+                            <h4 class="font-serif text-xl font-bold text-charcoal mb-2">Մցխեթ և Ջվարի</h4>
+                            <p class="text-charcoal-light">Մեկօրյա էքսկուրսիա դեպի Վրաստանի հին մայրաքաղաք Մցխեթ։ Այցելություն Սվետիցխովելի տաճար և Ջվարի վանական համալիր՝ Արագվի և Մտկվարի գետերի միախառնման վայրում գտնվող դիտահարթակով։</p>
+                        </div>
+                    </div>
+                    <!-- Day 3 -->
+                    <div class="fade-in-up flex gap-6" style="transition-delay: 200ms;">
+                        <div class="flex-shrink-0 w-16 h-16 bg-olive text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">03</div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-beige/50 flex-1 hover-lift">
+                            <h4 class="font-serif text-xl font-bold text-charcoal mb-2">Ճանապարհ դեպի Բաթումի</h4>
+                            <p class="text-charcoal-light">Տեղափոխում դեպի Սև ծովի ափ։ Ճանապարհին կանգառ Գորիում (Ստալինի թանգարան՝ ըստ ցանկության) և Սուրբ Նիկոլայ եկեղեցի։ Երեկոյան զբոսանք Բաթումիի բուլվարում։</p>
+                        </div>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="fade-in-up flex gap-6" style="transition-delay: 300ms;">
+                        <div class="flex-shrink-0 w-16 h-16 bg-olive text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">04</div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-beige/50 flex-1 hover-lift">
+                            <h4 class="font-serif text-xl font-bold text-charcoal mb-2">Ժամանակակից Բաթումի և հանգիստ</h4>
+                            <p class="text-charcoal-light">Ազատ ժամանակ լողափին, այցելություն Բաթումիի բուսաբանական այգի կամ ճոպանուղի դեպի Անանուրի։ Երեկոյան հրաժեշտի ընթրիք տեղական ծովամթերքների ռեստորանում։</p>
+                        </div>
+                    </div>
+                    <!-- Day 5 -->
+                    <div class="fade-in-up flex gap-6" style="transition-delay: 400ms;">
+                        <div class="flex-shrink-0 w-16 h-16 bg-olive text-white rounded-full flex items-center justify-center font-serif font-bold text-xl">05</div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-beige/50 flex-1 hover-lift">
+                            <h4 class="font-serif text-xl font-bold text-charcoal mb-2">Վերադարձ Երևան</h4>
+                            <p class="text-charcoal-light">Ազատ ժամանակ հուշանվերներ գնելու համար։ Տեղափոխում դեպի Երևան՝ անմոռանալի հիշողություններով։</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Included & Image -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center bg-beige-light/30 rounded-3xl p-8 md:p-12 fade-in-up">
+                <div>
+                    <img src="https://cdn.shopify.com/s/files/1/0771/6290/5791/files/download_4.jpg?v=1792260972" alt="Վրաստանի բնություն և ճարտարապետություն" class="rounded-2xl shadow-lg w-full h-96 object-cover hover-lift">
+                </div>
+                <div>
+                    <h3 class="font-serif text-3xl font-bold text-charcoal mb-6">Ի՞նչ է ներառված գնի մեջ</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span class="text-charcoal-light">Հարմարավետ տրանսֆեր Երևան-Թբիլիսի-Բաթումի-Երևան (մերկոդես կամ նմանատիպ մինիվեն)</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span class="text-charcoal-light">4 գիշերակաց 3* կամ 4* հյուրանոցում (կրկատեղանոց համարներ, նախաճաշը ներառված է)</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span class="text-charcoal-light">Պրոֆեսիոնալ հայախոս ուղեկցորդ-գիդ բոլոր էքսկուրսիաների ընթացքում</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span class="text-charcoal-light">Բոլոր մուտքի տոմսերը ծրագրում նշված վանքեր և թանգարաններ</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle-2" class="w-6 h-6 text-olive flex-shrink-0 mt-0.5"></i>
+                            <span class="text-charcoal-light">Ճանապարհորդական ապահովագրություն</span>
+                        </li>
+                    </ul>
+                    <div class="mt-8 p-4 bg-olive/10 rounded-xl border border-olive/20">
+                        <p class="text-sm text-olive-dark font-medium flex items-center gap-2">
+                            <i data-lucide="info" class="w-4 h-4"></i>
+                            Ուշադրություն. Ճաշը և ընթրիքը, ինչպես նաև անձնական ծախսերը ներառված չեն։ Մեր գիդը միշտ պատրաստ է խորհուրդ տալ լավագույն և մատչելի ռեստորանները։
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 md:py-28 bg-ivory border-t border-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <div class="fade-in-up">
+                    <span class="text-olive font-semibold text-sm tracking-wider uppercase mb-2 block">Ամրագրում</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-charcoal mb-6">Պատրա՞ստ եք ճանապարհորդել</h2>
+                    <p class="text-charcoal-light mb-8 leading-relaxed">
+                        Լրացրեք ձեր տվյալները, և մեր մենեջերը կկապվի ձեզ հետ 30 րոպեի ընթացքում՝ հստակեցնելու համար ազատ տեղերը, հյուրանոցի տարբերակները և ճշգրիտ մեկնման ամսաթիվը։
+                    </p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">Զանգահարեք մեզ</h4>
+                                <p class="text-charcoal-light">+374 93 230141</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-olive/10 rounded-full flex items-center justify-center flex-shrink-0 text-olive">
+                                <i data-lucide="message-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-charcoal">WhatsApp</h4>
+                                <a href="https://wa.me/37493230141?text=Բարև%20Ձեզ,%20հետաքրքրված%20եմ%20Վրաստանի%20տուրով:" target="_blank" class="text-olive hover:underline">Գրել ուղիղ հաղորդագրություն</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="fade-in-up bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-beige/50" style="transition-delay: 100ms;">
+                    <form id="georgiaTourForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Անուն Ազգանուն *</label>
+                                <input type="text" name="name" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Ձեր անունը">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Հեռախոսահամար *</label>
+                                <input type="tel" name="phone" required class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="+374 __ ______">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-charcoal mb-2">Էլ. հասցե</label>
+                            <input type="email" name="email" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="example@email.com">
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Ցանկալի մեկնման ամսաթիվ</label>
+                                <input type="date" name="dates" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-charcoal mb-2">Ուղևորների քանակ</label>
+                                <select name="travelers" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all">
+                                    <option value="1">1 Ուղևոր</option>
+                                    <option value="2" selected>2 Ուղևոր</option>
+                                    <option value="3-4">3-4 Ուղևոր</option>
+                                    <option value="5+">5+ Ուղևոր (Խումբ)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-charcoal mb-2">Լրացուցիչ ցանկություններ կամ հարցեր</label>
+                            <textarea name="details" rows="3" class="w-full bg-ivory border border-beige rounded-lg px-4 py-3 text-charcoal focus:ring-2 focus:ring-olive focus:border-transparent outline-none transition-all" placeholder="Օրինակ՝ ցանկանում ենք 5* հյուրանոց, ունենք երեխա..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-olive text-white font-bold py-4 rounded-lg hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <span>Ուղարկել հայտ</span>
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                        
+                        <p class="text-xs text-charcoal-light text-center">
+                            Սեղմելով «Ուղարկել հայտ»՝ դուք համաձայնում եք մեր գաղտնիության քաղաքականության հետ։
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <span class="font-serif text-2xl font-bold text-white">LiVA Travel</span>
+                        <span class="text-xs font-medium text-beige border border-beige px-2 py-0.5 rounded-full">Armenia</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Պրեմիում ճանապարհորդական գործակալություն Հայաստանում։ Մենք ստեղծում ենք անմոռանալի փորձառություններ՝ սկսած տեղական գեղատեսիլ վայրերից մինչև աշխարհի լավագույն ուղղությունները։
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6 text-beige">Արագ հղումներ</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors">Գլխավոր</a></li>
+                        <li><a href="artagna-turer.html" class="hover:text-white transition-colors">Արտագնա տուրեր</a></li>
+                        <li><a href="index.html#armenia" class="hover:text-white transition-colors">Հայաստանի բացահայտում</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6 text-beige">Ծառայություններ</h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Խմբային ուղևորություններ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Անհատական ծրագրեր</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Վիզային աջակցություն</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-lg font-bold mb-6 text-beige">Կապ</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-olive flex-shrink-0"></i>
+                            <span>+374 93 230141</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-olive flex-shrink-0"></i>
+                            <span>[Տեղադրել էլ. հասցե]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-gray-500">
+                    &copy; 2026 LiVA Travel Armenia. Բոլոր իրավունքները պաշտպանված են։
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // WhatsApp Form Submission Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('georgiaTourForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const name = formData.get('name') || 'N/A';
+                    const phone = formData.get('phone') || 'N/A';
+                    const email = formData.get('email') || 'N/A';
+                    const dates = formData.get('dates') || 'N/A';
+                    const travelers = formData.get('travelers') || 'N/A';
+                    const details = formData.get('details') || 'N/A';
+
+                    const message = `🇬🇪 *Նոր հայտ՝ Վրաստանի տուր*%0A%0A` +
+                                    `👤 *Անուն:* ${name}%0A` +
+                                    `📞 *Հեռախոս:* ${phone}%0A` +
+                                    `📧 *Էլ. հասցե:* ${email}%0A` +
+                                    `📅 *Ցանկալի ամսաթիվ:* ${dates}%0A` +
+                                    `👥 *Ուղևորներ:* ${travelers}%0A` +
+                                    `📝 *Մանրամասն:* ${details}`;
+
+                    const whatsappNumber = '37493230141';
+                    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+                    
+                    window.open(whatsappURL, '_blank');
+                    
+                    alert('Շնորհակալություն։ WhatsApp-ը կբացվի նոր պատուհանում՝ ձեր հայտով։ Խնդրում ենք սեղմել "Send" (Ուղարկել)։');
+                    form.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
