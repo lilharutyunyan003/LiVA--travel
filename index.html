@@ -85,17 +85,17 @@
                     <a href="artagna-turer.html" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Արտագնա տուրեր</a>
                     <a href="#tours" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Տուրեր</a>
                     <a href="#armenia" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Հայաստանի բացահայտում</a>
-                    <a href="#about" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Մեր մասին</a>
                     <a href="#contact" class="text-sm font-medium text-white hover:text-beige transition-colors drop-shadow-md">Կապ</a>
                 </nav>
 
                 <div class="hidden lg:flex items-center space-x-6">
-                    <div class="flex items-center space-x-2 text-sm font-medium text-white/90 drop-shadow-md">
-                        <button class="text-beige font-bold">HY</button>
-                        <span class="text-white/50">|</span>
-                        <button class="hover:text-beige transition-colors">EN</button>
-                        <span class="text-white/50">|</span>
-                        <button class="hover:text-beige transition-colors">RU</button>
+                    <!-- Language Switcher: Armenian is visually dominant -->
+                    <div class="flex items-center space-x-2 text-sm font-medium drop-shadow-md">
+                        <button class="text-beige font-bold bg-white/10 px-2 py-0.5 rounded">ՀԱՅ</button>
+                        <span class="text-white/40">|</span>
+                        <button class="text-white/60 hover:text-white transition-colors px-1">EN</button>
+                        <span class="text-white/40">|</span>
+                        <button class="text-white/60 hover:text-white transition-colors px-1">RU</button>
                     </div>
                     <a href="#contact" class="bg-olive text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Պլանավորել ուղևորություն
@@ -115,11 +115,10 @@
                 <a href="artagna-turer.html" class="block text-base font-medium text-charcoal hover:text-olive">Արտագնա տուրեր</a>
                 <a href="#tours" class="block text-base font-medium text-charcoal hover:text-olive">Տուրեր</a>
                 <a href="#armenia" class="block text-base font-medium text-charcoal hover:text-olive">Հայաստանի բացահայտում</a>
-                <a href="#about" class="block text-base font-medium text-charcoal hover:text-olive">Մեր մասին</a>
                 <a href="#contact" class="block text-base font-medium text-charcoal hover:text-olive">Կապ</a>
                 <div class="pt-4 border-t border-beige flex justify-between items-center">
-                    <div class="flex space-x-4 text-sm">
-                        <span class="text-olive font-bold">HY</span>
+                    <div class="flex space-x-4 text-sm font-medium">
+                        <span class="text-olive font-bold bg-beige-light px-2 py-0.5 rounded">ՀԱՅ</span>
                         <span class="text-charcoal-light">EN</span>
                         <span class="text-charcoal-light">RU</span>
                     </div>
@@ -314,7 +313,7 @@
                                 <span class="text-xs text-charcoal-light block">Սկսած</span>
                                 <span class="text-lg font-bold text-olive">120,000 ֏</span>
                             </div>
-                            <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors">Մանրամասն</button>
+                            <a href="georgia.html" class="bg-charcoal text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-olive transition-colors inline-block text-center">Մանրամասն</a>
                         </div>
                     </div>
                 </div>
@@ -383,7 +382,6 @@
                 </div>
             </div>
 
-            <!-- View All Outbound Tours Button -->
             <div class="mt-12 text-center fade-in-up">
                 <a href="artagna-turer.html" class="inline-flex items-center gap-2 bg-olive text-white px-8 py-3 rounded-full font-medium hover:bg-olive-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     <span>Դիտել բոլոր արտագնա տուրերը</span>
@@ -813,23 +811,25 @@
                     const budget = formData.get('budget') || 'N/A';
                     const details = formData.get('details') || 'N/A';
 
+                    // FIXED: Clean, proper Armenian labels for WhatsApp message
                     const message = `👋 *Նոր հարցում LiVA Travel-ից*%0A%0A` +
-                                    `👤 *Անուdelays:* ${name}%0A` +
-                                    `📞 *Հdelays:* ${phone}%0A` +
-                                    `📧 *Էdelays. hdelays:* ${email}%0A` +
-                                    `🛫 *Մdelays:* ${departure}%0A` +
-                                    `📍 *Ոdelays:* ${destination}%0A` +
-                                    `📅 *Աdelays:* ${dates}%0A` +
-                                    `👥 *Ոdelays:* ${travelers}%0A` +
-                                    `💰 *Բdelays:* ${budget}%0A` +
-                                    `📝 *Մdelays:* ${details}`;
+                                    `👤 *Անուն:* ${name}%0A` +
+                                    `📞 *Հեռախոս:* ${phone}%0A` +
+                                    `📧 *Էլ. հասցե:* ${email}%0A` +
+                                    `🛫 *Մեկնում:* ${departure}%0A` +
+                                    `📍 *Ուղղություն:* ${destination}%0A` +
+                                    `📅 *Ամսաթվեր:* ${dates}%0A` +
+                                    `👥 *Ուղևորներ:* ${travelers}%0A` +
+                                    `💰 *Բյուջե:* ${budget}%0A` +
+                                    `📝 *Մանրամասն:* ${details}`;
 
                     const whatsappNumber = '37493230141';
                     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
                     
                     window.open(whatsappURL, '_blank');
                     
-                    alert('Շնdelays։ WhatsApp-delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays delays......');
+                    // FIXED: Clean Armenian success alert
+                    alert('Շնորհակալություն։ Ձեր հարցումը պատրաստ է WhatsApp-ում ուղարկման համար։ Խնդրում ենք սեղմել "Ուղարկել"։');
                     form.reset();
                 });
             }
